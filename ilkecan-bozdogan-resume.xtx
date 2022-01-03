@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{ilkecan}{bozdogan}{\href{mailto:ilkecan@protonmail.com}{ilkecan@protonmail.com} | +90 507 371 4911}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{minipage}[t]{0.33\textwidth} 
+% \begin{minipage}[t]{0.41\textwidth} 
+\begin{minipage}[t]{0.41\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Middle East Technical University}
+\descript{B.S. in Computer Engineering}
+\location{Graduated Jul 2020 | Ankara, Turkey}
+One of the best universities in the country for this program. Only the applicants from the top 0.16\% (among +2 million) according to results of Student Selection and Placement System was accepted the year I applied.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Links} 
+% GitHub: \href{https://github.com/ilkecan}{\bf ilkecan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Skills}
+\subsection{Natural Languages}
+    \textbf{English}: Fluent \textbullet{} 
+    \textbf{Turkish}: Native
+
+\sectionsep
+\subsection{Construction Languages}
+    Nix \textbullet{}
+    TypeScript \textbullet{}
+    Python \textbullet{}
+    Haskell \textbullet{}
+    C \textbullet{}
+    C++ \textbullet{}
+    SQL \textbullet{}
+    Bash \textbullet{}
+    Rust
+
+\sectionsep
+\subsection{Tools}
+    Nix \textbullet{}
+    Docker \textbullet{}
+    Terraform \textbullet{}
+    Ansible \textbullet{}
+    Kubernetes
+
+\sectionsep
+\subsection{Services}
+    Nginx \textbullet{}
+    Jenkins \textbullet{}
+    Neo4j \textbullet{}
+    Prometheus \textbullet{}
+    Grafana \textbullet{}
+    Elastic stack \textbullet{}
+    Hydra
+
+\section{Project}
+\runsubsection{Guided Research}
+\descript{| Undergraduate Researcher}
+\location{Mar 2020 – Jun 2020}
+Participated in a research project about a CycleGAN based, context aware video stream enchancer. The project was selected by AdımODTÜ for an undergrad research grant and it also gained second place at the METU CEng Guided Research Symposium 2020.
+\sectionsep
+
+\runsubsection{Graduation Project}
+\descript{| Software/DevOps Engineer}
+\location{Oct 2019 – Jun 2020}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+    \begin{tightemize}
+        \item We created TACoRec: Trust-aware, community detection based, product recommender for e-commerce.
+        \item I managed the project server and services such as Nginx, Neo4j and Jenkins.
+        \item I wrote unit tests for each backend module.
+        \item I created CI/CD pipelines to run the tests, calculate the code coverage and perform linting and deployments.
+        \item I created the frontend using Pug.js, SASS and TypeScript, which was bundled using Webpack.
+        \item I created some of the backend modules such as "community namer" and "recommendation using collaborative filtering".
+        \item I managed the database schemas, wrote the migrations and the database interfaces.
+    \end{tightemize}
+    \sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+% \begin{minipage}[t]{0.66\textwidth} 
+% \begin{minipage}[t]{0.585\textwidth} 
+\begin{minipage}[t]{0.583\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{NixOS Foundation}
+\descript{| Summer of Nix Participant}
+\location{Aug 2021 – Oct 2021 | Remote}
+    I was shortlisted for this two-month train and work program funded via the European Commission's NGI Initiative. I have used tools such as Hydra and various *2nix projects and solidified my understanding of different concepts related to Nix. I have packaged five projects for the Nix ecosystem:
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item \href{https://github.com/ngi-nix/EgilSCIM}{\textbf{EgilSCIM}}: a client that implements the EGIL profile of the SS 12000 standard, written in C++
+    \item \href{https://github.com/ngi-nix/bloomf}{\textbf{bloomf}}: an efficient bloom filter library for OCaml
+    \item \href{https://github.com/ngi-nix/studio}{\textbf{EEZ Studio}}: a cross-platform visual development tool and SCPI instrument controller that uses Node.js and Electron
+    \item \href{https://github.com/NixOS/nixpkgs/pull/139814}{\textbf{URLExtract}}: a Python class for collecting (extracting) URLs from given text based on locating TLD
+    \item \href{https://github.com/ngi-nix/cwe_checker}{\textbf{cwe\_checker}}: a tool that finds vulnerable patterns in binary executables, written in Rust
+\end{tightemize}
+    I also created various pull requests to these or other projects related to Nix.
+    \sectionsep
+
+\runsubsection{Kekik Teknoloji A.S.}
+\descript{| Software/DevOps Engineer}
+\location{Sep 2020 – Aug 2021 | Adana, Turkey}
+\begin{tightemize}
+    \item Created a decentralized application for the Ministry of Trade of %
+        Turkey using Ethereum smart contracts. Overall architecture included %
+        services such as IPFS nodes for storage and Prometheus stack for %
+        monitoring. Everything was containerized, which was managed with %
+        Kubernetes using declarative object configuration.
+    \item Provisioned a Dokku instance using Ansible to deploy the solution stack of a start-up, which included multiple applications. Created Gitlab CI/CD pipelines for the continuous deployment of those apps to Dokku.
+    \item Created an Ansible playbook to deploy containerized ELK stack to two clients.
+    \item Imported the cloud infrastructure of a large advertising agency from AWS to Terraform.
+    \item Automated the deployment of our custom software to Azure using %
+        Terraform. Created Azure Pipelines for various tasks, including %
+        performing red-black deployment for the production environment.
+\end{tightemize}
+    \sectionsep
+
+\runsubsection{in4mo Oy}
+\descript{| Testing Engineer Trainee}
+\location{Jun 2019 - Sep 2019 | Espoo, Finland}
+\begin{tightemize}
+    \item Worked with automated tests written in Python using Robot framework and Selenium.
+    \item Discovered, documented and helped fixing various bugs in multiple platforms (Android, iOS, Windows, web).
+    \item Learned about tools such as Jira, Confluence, Jenkins and SonarQube.
+\end{tightemize}
+    \sectionsep
+
+\runsubsection{Kekik Teknoloji A.S.}
+\descript{| Software Engineer Intern}
+\location{Jun 2018 – Aug 2018 | Adana, Turkey}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Created a customized PostgreSQL to Amazon Redshift ETL job in Python.
+    \item Learned about unit testing, data warehouses, schema migrations and the DRY principle.
+\end{tightemize}
+
+
+\end{minipage}
+\end{document}  \documentclass[]{article}

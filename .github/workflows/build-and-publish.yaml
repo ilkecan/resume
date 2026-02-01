@@ -1,0 +1,35 @@
+name: Build resume & publish to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: nixbuild/nix-quick-install-action@v34
+      - name: Build the resume
+        run: nix build
+
+      - name: Prepare the artifact
+        run: |
+          mkdir _site
+          cp result _site/resume.pdf
+
+      - name: Upload the artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

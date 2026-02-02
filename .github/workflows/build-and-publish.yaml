@@ -23,7 +23,7 @@ jobs:
       - name: Prepare the artifact
         run: |
           mkdir _site
-          cp result _site/english.pdf
+          cp result _site/en.pdf
 
       - name: Upload the artifact
         uses: actions/upload-pages-artifact@v4

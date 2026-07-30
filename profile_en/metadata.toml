@@ -145,7 +145,7 @@ letter_footer = "Cover letter"
         # [personal.info.custom-degree]
         #     awesomeIcon = "graduation-cap" # See https://typst.app/universe/package/fontawesome/
         #     # Display text shown next to the icon in the header
-        #     text = "BsC in Computer Engineering"
+        #     text = "BSc in Computer Engineering"
         #     # URL the icon/text links to; omit for non-clickable entries
         #     # link = "https://www.example.com"
 

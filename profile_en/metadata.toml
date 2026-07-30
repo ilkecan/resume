@@ -10,7 +10,7 @@
 header_quote = "Software Engineer | Nix/NixOS, Cloud Infrastructure & Developer Tooling"
 
 # Text shown in the left side of the footer on CV pages
-cv_footer = "Resume"
+cv_footer = "Résumé"
 
 # Text shown in the left side of the footer on cover letter pages
 letter_footer = "Cover letter"

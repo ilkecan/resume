@@ -44,6 +44,7 @@
 
 // Add, remove, or reorder modules to customize your CV content
 #import-modules((
+  "summary",
   "professional",
   "projects",
   "education",

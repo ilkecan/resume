@@ -5,35 +5,40 @@
 #cv-section("Selected Projects")
 
 #cv-entry(
-  title: [Co-researcher],
-  society: [Guided Research Project],
+  title: [Guided Research Project],
+  society: [GAN-Based Streaming Enhancement],
   date: [Mar 2020 - Jun 2020],
-  location: [Ankara, Turkey],
+  location: [Ankara, Türkiye],
   description: list(
-    [Participated in a research project about a CycleGAN based, context aware video stream enhancer.],
-    [The project was selected by AdımODTÜ (METU Development Foundation) for an undergrad research grant.],
-    [It also gained second place at the METU CEng Guided Research Symposium 2020.],
+    [Co-researched a CycleGAN-based video-conferencing enhancement system that fine-tuned a shared model during streaming using compressed and periodically transmitted high-quality frames.],
+    [Built the data and evaluation infrastructure: a Bash/FFmpeg pipeline and Python/PyTorch tooling over a 305-video corpus, including 8,400 aligned pre-training frame pairs and codec comparisons using SSIM/MS-SSIM.],
+    [Co-authored the six-page paper and presented the project at the 2020 METU CEng Guided Research Symposium, where it placed second; the project also received an undergraduate research grant.],
   ),
   tags: (
-    "CycleGAN",
     "Python",
-  ).sorted(),
+    "Machine Learning",
+    "PyTorch",
+    "Computer Vision",
+    "FFmpeg",
+  ),
 )
 
 #cv-entry(
-  title: [Software/DevOps Engineer],
-  society: [Graduation Project],
+  title: [Senior Design Project],
+  society: [TACoRec: Trust-Aware Product Recommender],
   date: [Oct 2019 - Jun 2020],
-  location: [Ankara, Turkey],
+  location: [Ankara, Türkiye],
   description: list(
-    [Delivered a graduation project centered on a trust-aware, community-detection-based recommender system for e-commerce.],
-    [Took responsibility for backend and infrastructure components, CI/CD pipelines, automated testing, and database design.],
+    [Co-developed and deployed a trust-aware recommender system in a four-person team using Neo4j, Goldberg's densest-subgraph algorithm, collaborative filtering and trust-propagation methods.],
+    [Owned its VM, Nginx deployment and Jenkins CI/CD pipeline, which built, tested, analyzed and continuously deployed the application to a live development server.],
+    [Built most of the TypeScript/Pug frontend, contributed Python backend modules, authored the Python unit-test suite and created custom Neo4j interfaces and migration tooling.],
   ),
   tags: (
-    "Jenkins",
-    "Neo4j",
-    "Nginx",
     "Python",
     "TypeScript",
-  ).sorted(),
+    "Neo4j",
+    "Algorithms",
+    "Jenkins",
+    "Nginx",
+  ),
 )

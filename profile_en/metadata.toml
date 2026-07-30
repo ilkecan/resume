@@ -7,7 +7,7 @@
 # the fields that differ.
 
 # Italic tagline displayed below your name and contact info
-header_quote = "Backend/DevOps Engineer with an interest in functional solution stacks"
+header_quote = "Software Engineer | Nix/NixOS, Cloud Infrastructure & Developer Tooling"
 
 # Text shown in the left side of the footer on CV pages
 cv_footer = "Resume"

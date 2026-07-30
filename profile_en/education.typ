@@ -7,8 +7,11 @@
 #cv-entry(
   title: [Bachelor of Science in Computer Engineering],
   society: [Middle East Technical University],
-  date: [2016 - 2020],
+  date: [Sep 2016 - Jul 2020],
   location: [Ankara, Türkiye],
   logo: image("../assets/logos/metu.svg"),
-  description: [Admitted through the national university entrance examination by ranking within the top 0.2 percent among more than two million candidates.],
+  description: list(
+    [Admitted after placing in the top 0.2% of more than two million candidates in Türkiye's national university entrance examination.],
+    [Coursework included algorithms, operating systems, computer architecture, networking, embedded systems, functional programming with Haskell, machine learning and parallel/cloud computing.],
+  ),
 )

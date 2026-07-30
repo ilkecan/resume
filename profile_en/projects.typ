@@ -1,8 +1,8 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-entry
+#import "@preview/brilliant-cv:4.1.0": cv-entry, cv-section
 
 
-#cv-section("Projects")
+#cv-section("Projects & Associations")
 
 #cv-entry(
   title: [Co-researcher],
@@ -19,8 +19,6 @@
     "Python",
   ).sorted(),
 )
-
-#pagebreak()
 
 #cv-entry(
   title: [Software/DevOps Engineer],

@@ -1,13 +1,15 @@
 // Imports
-#import "@preview/brilliant-cv:3.1.1": cv-section, cv-entry, cv-entry-start, cv-entry-continued
+#import "@preview/brilliant-cv:4.1.0": (
+  cv-entry, cv-entry-continued, cv-entry-start, cv-section,
+)
 
 
 #cv-section("Professional Experience")
 
 #cv-entry(
+  title: [Software/DevOps Engineer],
   society: [Kekik Teknoloji],
   logo: image("../assets/logos/kekik.png"),
-  title: [Software/DevOps Engineer],
   date: [Sep 2023 - Dec 2025],
   location: [Remote],
   description: list(
@@ -31,9 +33,9 @@
 )
 
 #cv-entry(
+  title: [Summer of Nix Participant],
   society: [NixOS Foundation],
   logo: image("../assets/logos/nixos-foundation.png"),
-  title: [Summer of Nix Participant],
   date: [Aug 2021 - Oct 2021],
   location: [Remote],
   description: list(
@@ -52,9 +54,9 @@
 )
 
 #cv-entry(
+  title: [Software/DevOps Engineer],
   society: [Kekik Teknoloji],
   logo: image("../assets/logos/kekik.png"),
-  title: [Software/DevOps Engineer],
   date: [Sep 2020 - Aug 2021],
   location: [Adana, Turkey],
   description: list(
@@ -70,9 +72,9 @@
 )
 
 #cv-entry(
+  title: [Testing Engineer Trainee],
   society: [in4mo Oy],
   logo: image("../assets/logos/in4mo.jpg"),
-  title: [Testing Engineer Trainee],
   date: [Jun 2019 - Sep 2019],
   location: [Espoo, Finland],
   description: list(
@@ -90,9 +92,9 @@
 )
 
 #cv-entry(
+  title: [Software Engineering Intern],
   society: [Kekik Teknoloji],
   logo: image("../assets/logos/kekik.png"),
-  title: [Software Engineering Intern],
   date: [Jun 2018 - Aug 2018],
   location: [Adana, Turkey],
   description: list(

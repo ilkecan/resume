@@ -25,7 +25,7 @@
         fileset = lib.fileset.unions [
           (lib.fileset.fromSource myTypstSource)
           ./assets
-          ./modules_en
+          ./profile_en
         ];
       };
       commonArgs = {
@@ -49,8 +49,8 @@
       unstable_typstPackages = [
         {
           name = "brilliant-cv";
-          version = "3.1.1";
-          hash = "sha256-W7q7iEiBYa+WH4NT+49/c9tLaqFHl/7MEOGeaJbVnw0=";
+          version = "4.1.0";
+          hash = "sha256-EMbIobUiewPN+sGoxw5oDYyzP5ZFU/wtNyq8CEQ/pmA=";
         }
         {
           name = "fontawesome";

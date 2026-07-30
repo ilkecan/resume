@@ -101,8 +101,6 @@
   ),
 )
 
-#pagebreak()
-
 #cv-entry(
   society: [Kekik Teknoloji],
   logo: image("../assets/logos/kekik.png"),

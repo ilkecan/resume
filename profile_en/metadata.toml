@@ -50,7 +50,7 @@ letter_footer = "Cover letter"
         header_align = "left"
 
         # false hides the photo and gives full width to name/info
-        display_profile_photo = true
+        display_profile_photo = false
         # "50%" = circle, "0%" = square, "10%" = rounded corners
         profile_photo_radius = "25%"
         # Font size for the contact-info line (email, phone, links) in the header

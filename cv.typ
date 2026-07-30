@@ -32,7 +32,7 @@
 #show: cv.with(
   metadata,
   // Profile photos are personal and sensitive — avoid committing real ones to public git repos.
-  profile-photo: image("assets/avatar.jpg"),
+  // profile-photo: image("assets/avatar.jpg"),
   // Replace the generated contact row with arbitrary Typst content:
   // header-info: [
   //   #metadata.personal.info.email

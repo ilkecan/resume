@@ -13,11 +13,11 @@
   location: [Remote],
   description: list(
     [Served as Plettora's primary full-time engineer in a small product team, working across its Rails application, Python data platform, AWS infrastructure and delivery systems.],
-    [Replaced request-time Athena/S3 queries and Python-side filtering with a production PostgreSQL ETL pipeline; built modular Python scraping infrastructure with five source integrations and numerous daily targets.],
-    [Designed a modular, team-wide Nix environment for the Rails/Python monorepo using flake-parts and custom modules; migrated repositories and CI/CD from Azure DevOps to GitHub Actions.],
+    [Replaced request-time Athena/S3 queries and Python-side filtering with a production PostgreSQL ETL pipeline; built modular Python scraping infrastructure with five production source integrations and numerous configured listing targets. The scrapers ran daily in production.],
+    [Designed a modular, team-wide Nix environment for the combined Rails and Python monorepo using flake-parts and custom modules; moved repositories from Azure DevOps to GitHub and rebuilt CI/CD with GitHub Actions.],
     [Migrated staging and production from EKS to ECS using a hybrid Fargate/EC2 design; built a team-adopted kubectl-style ECS CLI in Nushell for inspection, logs, exec, restarts and scaling.],
-    [Cut ARM64 multi-architecture builds from more than 90 minutes to two to three minutes using native BuildKit builders; also stopped recurring ivdIQ production OOM incidents by deploying jemalloc.],
-    [Owned Plettora's technical SEO and internationalization, achieving first-page listing rankings; built automated content translation and production loan, lease and rental calculators with example- and invariant-based tests.],
+    [Cut ARM64 multi-architecture builds from more than 90 minutes to around three minutes using native BuildKit builders; eliminated recurring ivdIQ production OOM incidents by switching Rails to jemalloc.],
+    [Owned Plettora's technical SEO and internationalization, achieving first-page listing rankings; built automated content translation and production loan, lease and rental calculators validated against known examples and invariants.],
   ),
   tags: (
     "Nix",
@@ -27,6 +27,7 @@
     "Terraform",
     "OpenTofu",
     "Amazon ECS",
+    "Nushell",
     "Kubernetes",
     "Docker",
   ),
@@ -62,10 +63,10 @@
   date: [Sep 2020 - Aug 2021],
   location: [Adana, Türkiye],
   description: list(
-    [Served as Kekik's sole technical contributor on a Ministry of Trade project, designing a permissioned Ethereum/IPFS framework and implementing Solidity contracts, Node.js integration services and its Docker/Kubernetes environment.],
+    [Served as Kekik's sole technical contributor on a project for Türkiye's Ministry of Trade, designing a permissioned Ethereum/IPFS framework and implementing Solidity contracts, Node.js integration services and its Docker/Kubernetes environment.],
     [Owned Kordsa's Azure infrastructure workstream through production cutover: provisioned three environments with Terraform/Terragrunt, built cross-organization Azure DevOps pipelines and implemented blue/green deployment over private networking.],
-    [Migrated an AWS account spanning 75 resource types to Terraform, building a Rust/Rusoto tool that discovered resources and generated reviewable import scripts for resource-specific handling.],
-    [Additional client work included Ansible/Dokku deployments, Nginx configuration, ELK/APM observability, MySQL migrations and browser/mobile automation with TypeScript/Playwright and Python/Appium.],
+    [Migrated an AWS account spanning 75 resource types to Terraform; built a Rust/Rusoto tool that discovered resources and generated reviewable import scripts, then handled resource-specific edge cases.],
+    [Additional client work included Ansible/Dokku deployments, Nginx configuration, ELK and Elastic APM observability, MySQL migrations, browser automation using TypeScript/Playwright and mobile automation using Python/Appium.],
   ),
   tags: (
     "Nix",
@@ -76,6 +77,7 @@
     "Kubernetes",
     "Docker",
     "Node.js",
+    "Ethereum",
   ),
 )
 
@@ -86,7 +88,7 @@
   date: [Jun 2019 - Sep 2019],
   location: [Espoo, Finland],
   description: list(
-    [Tested mobile and web workflows across iOS, Android and Windows UWP; traced defects using source code, server logs and logcat and reported reproducible findings in Jira.],
+    [Tested mobile and web workflows across iOS, Android and Windows UWP; traced defects using source code, server logs and logcat, then reported reproducible findings in Jira.],
     [Worked with Robot Framework, Selenium and Appium, set up a local Jenkins instance to study the CI workflow and built a Python generator for cross-environment log retrieval.],
   ),
   tags: (

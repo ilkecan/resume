@@ -136,7 +136,7 @@ letter_footer = "Cover letter"
         # orcid = "0000-0000-0000-0000"
         # researchgate = "John-Doe"  # Shown as a clickable ResearchGate icon in header
         # Shown as map-marker icon in header; displayed as plain text (no link)
-        location = "Türkiye | Open to relocation"
+        location = "Türkiye · Open to relocation"
         # extraInfo = "Available for remote work"  # Shown as extra text with an info icon in header
         # Insert a line break in the header info, splitting icons across two lines
         #linebreak = ""

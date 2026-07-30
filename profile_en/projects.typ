@@ -5,6 +5,23 @@
 #cv-section("Selected Projects")
 
 #cv-entry(
+  title: [Open-Source Project],
+  society: link("https://github.com/ilkecan/flutter-nix")[flutter-nix],
+  date: [Nov 2021 - Jan 2022],
+  location: [Remote],
+  description: list(
+    [Built an experimental open-source Nix framework providing reproducible Flutter development environments across Linux, web and Android, plus deterministic Linux and web application builds.],
+    [Developed its Haskell translator as a Cabal CLI that parsed Flutter package metadata, prefetched Pub and SDK dependencies concurrently, reused cached hashes and generated JSON lock data for sandboxed Nix builds.],
+  ),
+  tags: (
+    "Haskell",
+    "Nix",
+    "Cabal",
+    "Functional Programming",
+    "Developer Tooling",
+  ),
+)
+#cv-entry(
   title: [Guided Research Project],
   society: [GAN-Based Streaming Enhancement],
   date: [Mar 2020 - Jun 2020],

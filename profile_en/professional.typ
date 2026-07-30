@@ -17,7 +17,8 @@
     [Designed a modular, team-wide Nix environment for the combined Rails and Python monorepo using flake-parts and custom modules; moved repositories from Azure DevOps to GitHub and rebuilt CI/CD with GitHub Actions.],
     [Migrated staging and production from EKS to ECS using a hybrid Fargate/EC2 design; built a team-adopted kubectl-style ECS CLI in Nushell for inspection, logs, exec, restarts and scaling.],
     [Cut ARM64 multi-architecture builds from more than 90 minutes to around three minutes using native BuildKit builders; eliminated recurring ivdIQ production OOM incidents by switching Rails to jemalloc.],
-    [Owned Plettora's technical SEO and internationalization, achieving first-page listing rankings; built automated content translation and production loan, lease and rental calculators validated against known examples and invariants.],
+    [Owned Plettora's technical SEO and internationalization, achieving first-page rankings; in one verified example, a Plettora listing for a Volvo excavator ranked above Volvo's own result.],
+    [Built automated content translation and production loan, lease and rental calculators validated against known examples and invariants.],
   ),
   tags: (
     "Nix",
@@ -43,7 +44,7 @@
     [Selected from 99 applicants as one of 35 participants in the inaugural paid, full-time, eight-week program funded through the European Commission's Next Generation Internet initiative.],
     [Packaged five projects spanning CMake, OCaml, Electron/Node.js, Python and Rust, delivering upstream or standalone flakes validated with Hydra jobs and NixOS VM tests.],
     [Upstreamed the EgilSCIM and EEZ Studio flakes; for EgilSCIM, built a NixOS VM test and a GDB-ready development shell using dependency debug symbols and source paths.],
-    [Added URLExtract to Nixpkgs as its maintainer, fixed Ghidra for cwe\_checker and contributed accepted documentation to Nix.],
+    [Added URLExtract to Nixpkgs as its maintainer, fixed Ghidra for cwe\_checker and contributed a documentation warning to Nix that was reviewed and accepted by its creator, Eelco Dolstra.],
   ),
   tags: (
     "Nix",

@@ -10,6 +10,11 @@
 // Imports
 #import "@preview/brilliant-cv:4.1.0": cv, h-bar
 
+#set document(
+  title: [İlkecan Bozdoğan - Resume],
+  author: "İlkecan Bozdoğan",
+)
+
 // Each profile lives in its own folder with a self-contained metadata.toml.
 // Switch profile at compile time:
 //   typst compile cv.typ --input profile=fr

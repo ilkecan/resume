@@ -11,7 +11,7 @@
 #import "@preview/brilliant-cv:4.1.0": cv, h-bar
 
 #set document(
-  title: [İlkecan Bozdoğan - Resume],
+  title: [İlkecan Bozdoğan - Résumé],
   author: "İlkecan Bozdoğan",
 )
 

@@ -2,7 +2,7 @@
 #import "@preview/brilliant-cv:4.1.0": cv-entry, cv-section
 
 
-#cv-section("Projects & Associations")
+#cv-section("Selected Projects")
 
 #cv-entry(
   title: [Co-researcher],

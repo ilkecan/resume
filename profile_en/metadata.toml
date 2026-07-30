@@ -77,7 +77,7 @@ letter_footer = "Cover letter"
 
     [layout.footer]
         # true shows "1/2" style page numbers in the footer
-        display_page_counter = false
+        display_page_counter = true
 
         # false removes the footer entirely (no page text, no counter)
         display_footer = true

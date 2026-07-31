@@ -2,15 +2,15 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1769789167,
-        "narHash": "sha256-XBpD8PvMrKeQ7UXr8lYl+mm1tYeWX+qTTWAflzE0KtY=",
-        "rev": "62c8382960464ceb98ea593cb8321a2cf8f9e3e5",
+        "lastModified": 1785301185,
+        "narHash": "sha256-PlAXr9kpfXhMFU0OQ7qtE8FhLQo21WXFVGqIC85UFyc=",
+        "rev": "9bc02893134c733dd85de46ee4fb2fac696b5529",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre937308.62c838296046/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1043539.9bc02893134c/nixexprs.tar.xz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+        "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz"
       }
     },
     "root": {
@@ -26,11 +26,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766393382,
-        "narHash": "sha256-qLV+JhrE6kEOJ/0eJDaQubqIB2BU3I2t3cGtskvsx2M=",
+        "lastModified": 1784717351,
+        "narHash": "sha256-wOPjMKocNlVoE4CVcXrf/z/JCGfuMuKDZRI0WrdoC3s=",
         "owner": "loqusion",
         "repo": "typix",
-        "rev": "a95319d212475b93ebc90ffd6cb4e26e0bd8a025",
+        "rev": "6e70eeb2ee5161bca6b25dec6df39b0f90ad647e",
         "type": "github"
       },
       "original": {

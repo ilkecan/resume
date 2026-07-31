@@ -2,7 +2,7 @@
   description = "A Typst project that uses Typst packages";
 
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
+    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
 
     typix = {
       url = "github:loqusion/typix";

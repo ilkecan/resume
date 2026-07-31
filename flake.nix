@@ -10,13 +10,13 @@
     };
   };
 
-  outputs = inputs:
+  outputs = { self, nixpkgs, typix }:
     let
       system = "x86_64-linux";
-      pkgs = inputs.nixpkgs.legacyPackages.${system};
+      pkgs = nixpkgs.legacyPackages.${system};
       inherit (pkgs) lib;
 
-      typixLib = inputs.typix.lib.${system};
+      typixLib = typix.lib.${system};
 
       myTypstSource = typixLib.cleanTypstSource ./.;
       src = lib.fileset.toSource {
@@ -27,9 +27,8 @@
           ./profile_en
         ];
       };
-      commonArgs = {
-        typstSource = "resume.typ";
 
+      commonArgs = {
         fontPaths = with pkgs; [
           "${font-awesome}/share/fonts/opentype"
           "${roboto}/share/fonts/truetype"
@@ -58,41 +57,62 @@
         }
       ];
 
-      # Compile a Typst project, *without* copying the result
-      # to the current directory
-      build-drv = typixLib.buildTypstProject (commonArgs
-        // {
-          inherit src unstable_typstPackages;
-        });
+      typstProjectFor = typstSource:
+        let
+          commonArgs' = commonArgs // { inherit typstSource; };
+          buildArgs = commonArgs' // { inherit src unstable_typstPackages; };
+        in
+        {
+          build = typixLib.buildTypstProject buildArgs;
+          # Compile a Typst project, and then copy the result
+          # to the current directory
+          buildLocal = typixLib.buildTypstProjectLocal buildArgs;
 
-      # Compile a Typst project, and then copy the result
-      # to the current directory
-      build-script = typixLib.buildTypstProjectLocal (commonArgs
-        // {
-          inherit src unstable_typstPackages;
-        });
+          # Watch a project and recompile on changes
+          watch = typixLib.watchTypstProject commonArgs';
+        };
 
-      # Watch a project and recompile on changes
-      watch-script = typixLib.watchTypstProject commonArgs;
+      resume = typstProjectFor "resume.typ";
+      letter = typstProjectFor "letter.typ";
     in
     {
       checks.${system} = {
-        inherit build-drv build-script watch-script;
+        letter-build = letter.build;
+        letter-buildLocal = letter.buildLocal;
+        letter-watch = letter.watch;
+
+        resume-build = resume.build;
+        resume-buildLocal = resume.buildLocal;
+        resume-watch = resume.watch;
       };
 
-      packages.${system}.default = build-drv;
+      packages.${system} = {
+        default = self.packages.${system}.resume;
+        letter = letter.build;
+        resume = resume.build;
+      };
 
-      apps.${system} = rec {
-        default = watch;
+      apps.${system} = {
+        default = self.apps.${system}.resume-watch;
 
-        watch = {
+        letter = {
           type = "app";
-          program = lib.getExe watch-script;
+          program = lib.getExe letter.buildLocal;
         };
 
-        build = {
+        letter-watch = {
           type = "app";
-          program = lib.getExe build-script;
+          program = lib.getExe letter.watch;
+        };
+
+        resume = {
+          type = "app";
+          program = lib.getExe resume.buildLocal;
+        };
+
+        resume-watch = {
+          type = "app";
+          program = lib.getExe resume.watch;
         };
       };
 
@@ -102,7 +122,7 @@
           # WARNING: Don't run `typst-build` directly, instead use `nix run .#build`
           # See https://github.com/loqusion/typix/issues/2
           # build-script
-          watch-script
+          resume.watch
           # More packages can be added here, like typstfmt
           # pkgs.typstfmt
         ];

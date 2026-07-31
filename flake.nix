@@ -29,7 +29,7 @@
         ];
       };
       commonArgs = {
-        typstSource = "cv.typ";
+        typstSource = "resume.typ";
 
         fontPaths = with pkgs; [
           "${font-awesome}/share/fonts/opentype"

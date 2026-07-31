@@ -8,12 +8,11 @@
       url = "github:loqusion/typix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = inputs:
-    inputs.flake-utils.lib.eachDefaultSystem (system: let
+    let
+      system = "x86_64-linux";
       pkgs = inputs.nixpkgs.legacyPackages.${system};
       inherit (pkgs) lib;
 
@@ -75,24 +74,29 @@
 
       # Watch a project and recompile on changes
       watch-script = typixLib.watchTypstProject commonArgs;
-    in {
-      checks = {
+    in
+    {
+      checks.${system} = {
         inherit build-drv build-script watch-script;
       };
 
-      packages.default = build-drv;
+      packages.${system}.default = build-drv;
 
-      apps = rec {
+      apps.${system} = rec {
         default = watch;
-        build = inputs.flake-utils.lib.mkApp {
-          drv = build-script;
+
+        watch = {
+          type = "app";
+          program = lib.getExe watch-script;
         };
-        watch = inputs.flake-utils.lib.mkApp {
-          drv = watch-script;
+
+        build = {
+          type = "app";
+          program = lib.getExe build-script;
         };
       };
 
-      devShells.default = typixLib.devShell {
+      devShells.${system}.default = typixLib.devShell {
         inherit (commonArgs) fontPaths virtualPaths;
         packages = [
           # WARNING: Don't run `typst-build` directly, instead use `nix run .#build`
@@ -103,5 +107,5 @@
           # pkgs.typstfmt
         ];
       };
-    });
+    };
 }

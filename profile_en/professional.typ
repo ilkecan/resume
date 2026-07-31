@@ -14,7 +14,7 @@
   description: list(
     [Served as Plettora's primary full-time engineer in a small product team, working across its Rails application, Python data platform, AWS infrastructure and delivery systems.],
     [Replaced request-time Athena/S3 queries and Python-side filtering with a production PostgreSQL ETL pipeline; built modular Python scraping infrastructure with five production source integrations and numerous configured listing targets. The scrapers ran daily in production.],
-    [Designed a modular, team-wide Nix environment for the combined Rails and Python monorepo using flake-parts and custom modules; moved repositories from Azure DevOps to GitHub and rebuilt CI/CD with GitHub Actions.],
+    [Designed a modular, team-wide Nix environment for the Rails/Python monorepo using flake-parts and custom modules, with direnv-driven uv lockfile/venv synchronization; moved repositories from Azure DevOps to GitHub and rebuilt CI/CD with GitHub Actions.],
     [Migrated staging and production from EKS to ECS using a hybrid Fargate/EC2 design; built a team-adopted kubectl-style ECS CLI in Nushell for inspection, logs, exec, restarts and scaling.],
     [Cut ARM64 multi-architecture builds from more than 90 minutes to around three minutes using native BuildKit builders; eliminated recurring ivdIQ production OOM incidents by switching Rails to jemalloc.],
     [Owned Plettora's technical SEO and internationalization, achieving first-page rankings; in one verified example, a Plettora listing for a Volvo excavator ranked above Volvo's own result.],
